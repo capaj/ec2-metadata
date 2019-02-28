@@ -1,0 +1,46 @@
+{
+  "name": "@capaj/ec2-metadata",
+  "version": "0.9.0",
+  "description": "utlity for fetching ec2 instance metadata synchronously/asynchronously",
+  "main": "lib/ec2-metadata.js",
+  "typings": "lib/ec2-metadata.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "prepublishOnly": "npm run build",
+    "prebuild": "npm run clean && echo Using TypeScript && tsc --version",
+    "build": "tsc --pretty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capaj/ec2-metadata.git"
+  },
+  "keywords": [
+    "ec2",
+    "metadata",
+    "sync",
+    "async"
+  ],
+  "author": "capajj@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/capaj/ec2-metadata/issues"
+  },
+  "homepage": "https://github.com/capaj/ec2-metadata#readme",
+  "devDependencies": {
+    "@types/got": "^9.4.1",
+    "husky": "^1.3.1",
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.3.3333"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "got": "^9.6.0",
+    "sync-request": "^6.0.0"
+  }
+}
