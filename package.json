@@ -3,6 +3,7 @@
   "version": "0.9.0",
   "description": "utlity for fetching ec2 instance metadata synchronously/asynchronously",
   "main": "lib/ec2-metadata.js",
+  "private": false,
   "typings": "lib/ec2-metadata.d.ts",
   "scripts": {
     "clean": "rimraf lib",
